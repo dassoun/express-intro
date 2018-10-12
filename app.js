@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require('./todos'));
 
 // Start the server
-app.listen(1337, function () {
-    console.log('Ready on port 1337');
+var port = process.env.PORT || 1337;
+app.listen(port, function () {
+    console.log('Ready on port ' + port);
 });
